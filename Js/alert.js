@@ -1,7 +1,12 @@
 "use strict";
-// In this simple assignment you are given a number and have to make it negative. But maybe the number is already negative?
-function makeNegative(num) {
-    if (num > 0) return num * -1;
-    else return num;
+// You get an array of numbers, return the sum of all of the positives ones.
+//
+// Example [1,-4,7,12] => 1 + 7 + 12 = 20
+//
+// Note: if there is nothing to sum, the sum is default to 0.
+function positiveSum(arr) {
+    let onlyPositive = arr.filter(n => n > 0);
+    let result = onlyPositive.reduce((sum, current) => sum + current, 0);
+    return result;
 }
 
